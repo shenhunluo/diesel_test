@@ -1,0 +1,22 @@
+CREATE TABLE `commodity` (
+  `id` varchar(36) NOT NULL COMMENT 'id',
+  `commodity_name` varchar(100) NOT NULL COMMENT '商品名',
+  `commodity_class` varchar(36) NOT NULL COMMENT '商品分类',
+  `commodity_num` varchar(100) NOT NULL COMMENT '商品编号',
+  `trademark` varchar(36) NOT NULL COMMENT '商品品牌',
+  `specification` varchar(50) NOT NULL COMMENT '商品规格',
+  `units` varchar(20) NOT NULL COMMENT '商品单位',
+  `commodity_image` varchar(200) DEFAULT NULL COMMENT '商品图片',
+  `sign` int(11) DEFAULT NULL COMMENT '0：固定资产；1：耗材',
+  `start_using` int(11) DEFAULT NULL COMMENT '1：启用;0：未启用',
+  `notes` varchar(200) DEFAULT NULL COMMENT '备注',
+  `index_word` varchar(20) DEFAULT NULL COMMENT '检索词',
+  `used` int(11) DEFAULT NULL COMMENT '1:采购过；0:未采购过',
+  `createBy` varchar(50) DEFAULT NULL,
+  `createOn` datetime DEFAULT NULL,
+  `updateBy` varchar(50) DEFAULT NULL,
+  `updateOn` datetime DEFAULT NULL,
+  `barcode` varchar(2000) DEFAULT NULL COMMENT '条形码',
+  `lastPutInPrice` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品'
